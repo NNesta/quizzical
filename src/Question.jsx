@@ -41,13 +41,18 @@ const Question = () => {
   const [success, setSuccess] = useState(Array.from({ length: 5 }));
 
   return (
-    <main className="bg-secondary-100 flex flex-col gap-2 lg:px-32 justify-center items-center text-primary-100 w-full min-h-screen mx-auto relative py-4">
-      <img className="fixed top-0 right-0 hidden lg:block" src="/blobs.svg" />
+    <main className="bg-secondary-100 flex flex-col gap-2 px-4 lg:px-8 justify-center items-center text-primary-100 w-full min-h-screen  relative py-4">
+      <img
+        className="fixed top-0 right-0 hidden lg:block"
+        src="/blobs.svg"
+        alt=""
+      />
       <img
         className="fixed bottom-0 left-0 hidden lg:block"
         src="/blobs_2.svg"
+        alt=""
       />
-      <div className="flex flex-col gap-4">
+      <div className="flex flex-col gap-4 w-full px-64">
         {newData.map((item, index) => (
           <QuestionCard
             key={index}

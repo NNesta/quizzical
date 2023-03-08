@@ -11,7 +11,7 @@ const QuestionCard = ({
   const [submitted, setSubmitted] = useState(null);
 
   return (
-    <div className="w-4/5 flex flex-col gap-2 border-b py-4 px-2">
+    <div className="flex w-full  flex-col gap-2 border-b py-4 px-2">
       <h1>{question}</h1>
       <ul className="flex flex-wrap items-center gap-8">
         {choices.map((choice, index) => (
