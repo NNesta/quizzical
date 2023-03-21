@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 
 const QuestionCard = ({
   question,
@@ -9,15 +9,17 @@ const QuestionCard = ({
   setSuccess,
 }) => {
   const [submitted, setSubmitted] = useState(null);
-
+  useEffect(() => {
+    setSubmitted((submitted) => (!checked ? null : submitted));
+  }, [checked]);
   return (
     <div className="flex w-full  flex-col gap-2 border-b py-4 px-2">
-      <h1>{question}</h1>
-      <ul className="flex flex-wrap items-center gap-8">
+      <h1 dangerouslySetInnerHTML={{ __html: question }}></h1>
+      <ul className="flex flex-wrap items-center gap-4 lg:gap-8">
         {choices.map((choice, index) => (
           <li
-            key={index}
-            className={`border whitespace-nowrap border-primary-100  rounded-lg px-2 py-1 ${
+            key={id}
+            className={`border whitespace-nowrap border-primary-100 hover:bg-secondary-200/50  rounded-lg px-2 py-1 ${
               submitted === index && !checked && "bg-secondary-200"
             } ${choice === correct_answer && checked && "bg-success-100"} ${
               submitted === index &&

@@ -6,9 +6,9 @@ const Home = () => {
     navigate("/question");
   };
   return (
-    <main className="bg-secondary-100 text-primary-100 max-w-xl mx-auto my-20 aspect-square relative">
-      <img className="absolute top-0 right-0" src="/blobs.svg" />
-      <img className="absolute bottom-0 left-0" src="/blobs_2.svg" />
+    <main className="bg-secondary-100 text-primary-100  h-screen relative">
+      <img alt="" className="absolute top-0 right-0" src="/blobs.svg" />
+      <img alt="" className="absolute bottom-0 left-0" src="/blobs_2.svg" />
       <div className="flex flex-col items-center h-full justify-center gap-4 ">
         <h1 className=" font-bold text-2xl">Quizzical</h1>
         <p className=" mb-4">Some description if needed</p>
