@@ -25,7 +25,7 @@ const Question = () => {
   const getQuestion = () => {
     setChecked(false);
     setIsLoading(true);
-    fetch("https://opentdb.com/api.php?amount=5&category=23&type=multiple")
+    fetch("https://opentdb.com/api.php?amount=5&category=27&difficulty=hard")
       .then((re) => re.json())
       .then((result) => {
         setNewData(
